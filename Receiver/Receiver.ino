@@ -1,3 +1,7 @@
+/*
+  This is the code to be uploaded to the receiver controller on the wearable vest
+  I recommend using using esp8266 for the following code though further changes can be done to make it compatible with esp32
+*/
 #include <Adafruit_NeoPixel.h>
 #include <fastLED.h>
 
