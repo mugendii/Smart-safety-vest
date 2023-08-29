@@ -2,7 +2,16 @@
 This is the code that will be uploaded on the esp32 board on the transmitter controller
 */
 #include "LiquidCrystal_I2C.h"
+#include "esp_now.h"
+#include "WiFi.h"
+  
 
+/*MAC Address of the receiver controller
+  edit the address as required
+
+*/
+uint8_t broadastAddress[] = {0xFF, 0xFF,0xFF, 0xFF, 0xFF, 0xFF};
+ 
 LiquidCrystal_I2C lcd(0x3F , 16, 2);
 // variables
 const int rightButtonPin = 2;  // the number of the right pushbutton pin
