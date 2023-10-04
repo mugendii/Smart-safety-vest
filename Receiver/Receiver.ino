@@ -15,7 +15,9 @@ const int LED_PINRIGHT = 13;  // Pin connected to the LED
 const int LED_PINLEFT = 12;
 
 // Pin to use to send signals to WS2812B
-#define LEDSTRIP_PIN 6
+#define REDLEDSTRIP_PIN 25
+#define BLUELEDSTRIP_PIN 26
+#define GREENLEDSTRIP_PIN 27
 
 // Number of WS2812B LEDs attached to the Arduino
 #define LED_COUNT 12
