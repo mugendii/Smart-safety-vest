@@ -5,7 +5,7 @@
 #include <Adafruit_NeoPixel.h>
 #include <fastLED.h>
 #include <esp_now.h>
-include <WiFi.h>
+#include <WiFi.h>
 
 
 // Replace with the MAC address of the transmitter ESP32
@@ -50,7 +50,10 @@ void setup() {
   esp_now_register_recv_cb([](uint8_t *mac, uint8_t *data, uint8_t len) {
     if (len == 1) {
       if (data[0] == HIGH) {
-        digitalWrite(LED_PIN_1, HIGH);  // Turn on the first LED
+        digitalWrite(LED_PIN_1, HIGH);
+        delay(500);
+        digitalWrite(LED_PIN_1, LOW);
+        delay(500);// Turn on the first LED
       } else {
         digitalWrite(LED_PIN_1, LOW);   // Turn off the first LED
       }
@@ -58,7 +61,10 @@ void setup() {
     } 
     if (len == 2) {
       if (data[1] == HIGH) {
-        digitalWrite(LED_PIN_2, HIGH);  // Turn on the second LED
+        digitalWrite(LED_PIN_2, HIGH);
+        delay(500);
+        digitalWrite(LED_PIN_2, LOW);
+        delay(500);// Turn on the second LED
       } else {
         digitalWrite(LED_PIN_2, LOW);   // Turn off the second LED
       }
