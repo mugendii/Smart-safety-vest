@@ -9,7 +9,7 @@ include <WiFi.h>
 
 
 // Replace with the MAC address of the transmitter ESP32
-uint8_t transmitterMacAddress[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint8_t transmitterMacAddress[] = {0x94, 0x3C, 0xC6, 0x10, 0xB5, 0xBC};
 /* for prototyping we started with LEDs*/
 const int LED_PINRIGHT = 13;  // Pin connected to the LED
 const int LED_PINLEFT = 12;
