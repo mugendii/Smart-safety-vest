@@ -23,6 +23,7 @@ bool leftButtonState = false;  // variable for reading the pushbutton status
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(115200);
   lcd.init();
   lcd.backlight();
   lcd.setCursor(2 , 1);
