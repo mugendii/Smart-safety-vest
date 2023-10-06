@@ -14,8 +14,8 @@ uint8_t broadastAddress[] = {0xFF, 0xFF,0xFF, 0xFF, 0xFF, 0xFF};
  
 LiquidCrystal_I2C lcd(0x3F , 16, 2);
 // variables
-const int rightButtonPin = 2;  // the number of the right pushbutton pin
-const int leftButtonPin = 2;  // the number of the left pushbutton pin
+const int rightButtonPin = 26;  // the number of the right pushbutton pin
+const int leftButtonPin = 27;  // the number of the left pushbutton pin
 
 // variables will change:
 bool rightButtonState = false;  // variable for reading the pushbutton status
