@@ -14,8 +14,8 @@ uint8_t broadcastAddress[] = {0xCC, 0x50,0xE3, 0x55, 0x08, 0xFD};
  
 LiquidCrystal_I2C lcd(0x3F , 16, 2);
 // variables
-const int rightButtonPin = 2;  // the number of the right pushbutton pin
-const int leftButtonPin = 2;  // the number of the left pushbutton pin
+const int rightButtonPin = 26;  // the number of the right pushbutton pin
+const int leftButtonPin = 27;  // the number of the left pushbutton pin
 
 // variables will change:
 bool rightButtonState = false;  // variable for reading the pushbutton status
@@ -23,6 +23,7 @@ bool leftButtonState = false;  // variable for reading the pushbutton status
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(115200);
   lcd.init();
   lcd.backlight();
   lcd.setCursor(2 , 1);
