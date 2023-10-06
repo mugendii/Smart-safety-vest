@@ -10,7 +10,7 @@ This is the code that will be uploaded on the esp32 board on the transmitter con
   edit the address as required
 
 */
-uint8_t broadastAddress[] = {0xFF, 0xFF,0xFF, 0xFF, 0xFF, 0xFF};
+uint8_t broadcastAddress[] = {0xCC, 0x50,0xE3, 0x55, 0x08, 0xFD};
  
 LiquidCrystal_I2C lcd(0x3F , 16, 2);
 // variables
