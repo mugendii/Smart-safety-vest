@@ -3,13 +3,13 @@
   I recommend using using esp8266 for the following code though further changes can be done to make it compatible with esp32
 */
 #include <Adafruit_NeoPixel.h>
-#include <fastLED.h>
+//#include <fastLED.h>
 #include <esp_now.h>
-include <WiFi.h>
+#include <WiFi.h>
 
 
 // Replace with the MAC address of the transmitter ESP32
-uint8_t transmitterMacAddress[] = {0x94, 0x3C, 0xC6, 0x10, 0xB5, 0xBC};
+uint8_t transmitterMacAddress[] = {0xA0, 0xB7, 0x65, 0x60, 0x1B, 0x70};
 /* for prototyping we started with LEDs*/
 const int LED_PINRIGHT = 13;  // Pin connected to the LED
 const int LED_PINLEFT = 12;
@@ -23,11 +23,11 @@ const int LED_PINLEFT = 12;
 #define LED_COUNT 12
 
 // Setting up the NeoPixel library
-Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+//Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 void setup() {
-  strip.begin();           // Initialize NeoPixel object
-  strip.setBrightness(10); // Set BRIGHTNESS to about 4% (max = 255)
+  //strip.begin();           // Initialize NeoPixel object
+  //strip.setBrightness(10); // Set BRIGHTNESS to about 4% (max = 255)
 
   Serial.begin(115200);
   pinMode(LED_PINRIGHT, OUTPUT);
